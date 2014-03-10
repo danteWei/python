@@ -9,12 +9,6 @@ class LinkedList:
 		self.head = node
 		self.length = self.length + 1
 
-	def print_backward(self):
-	    print "[",
-	    if self.head != None:
-	    	self.head.print_backward()
-	    print "]",
-
 class Node:
 	def __init__(self, cargo=None, next=None):
 		self.cargo = cargo
@@ -32,9 +26,3 @@ class Node:
 				print node,
 			node = node.next
 		print "]",
-
-	def print_backward(self):
-	    if self.next != None:
-	        tail = self.next
-	        tail.print_backward()
-	    print self.cargo,
